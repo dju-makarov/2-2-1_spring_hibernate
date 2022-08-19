@@ -52,6 +52,16 @@ public class MainApp {
          System.out.println();
       }
 
+      // User with Car
+      for (User user : userService.getUsersWithCar(car3)) {
+         System.out.println("Find user with Car = " + user.getCar().getModel() + " series" + user.getCar().getSeries());
+         System.out.println("Id = "+user.getId());
+         System.out.println("First Name = "+user.getFirstName());
+         System.out.println("Last Name = "+user.getLastName());
+         System.out.println("Email = "+user.getEmail());
+         System.out.println();
+      }
+
       context.close();
    }
 }
